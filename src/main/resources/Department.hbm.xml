@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.klef.jfsd.exam" table="department">
+        <id name="deptId" column="dept_id">
+            <generator class="identity" />
+        </id>
+        <property name="name" column="dept_name" />
+        <property name="location" column="location" />
+        <property name="hodName" column="hod_name" />
+    </class>
+</hibernate-mapping>

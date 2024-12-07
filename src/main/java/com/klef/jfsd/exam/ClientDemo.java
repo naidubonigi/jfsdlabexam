@@ -19,12 +19,12 @@ public class ClientDemo {
             // Start a transaction
             session.beginTransaction();
 
-            // Update the department with id = 1 (make sure this id exists)
-            String hql = "update Department set name = ?1, location = ?2 where id = ?3"; // Use 'id' in the query
+            // Update the department with id 1 (replace 1 with the actual deptId)
+            String hql = "update Department set name = ?1, location = ?2 where id = ?3";
             Query query = session.createQuery(hql);
             query.setParameter(1, "Updated Department Name");
             query.setParameter(2, "New Location");
-            query.setParameter(3, 1); // Assuming id = 1 exists in the database
+            query.setParameter(3, 1); // Assuming deptId = 1 exists in the database
 
             // Execute the update
             int result = query.executeUpdate();
